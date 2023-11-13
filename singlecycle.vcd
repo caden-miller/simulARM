@@ -1,0 +1,415 @@
+$date
+	Mon Nov 13 15:30:47 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module SingleCycleProcTest_v $end
+$var wire 64 ! currentPC [63:0] $end
+$var wire 64 " MemtoRegOut [63:0] $end
+$var reg 1 # CLK $end
+$var reg 1 $ Reset_L $end
+$var reg 8 % passed [7:0] $end
+$var reg 64 & startPC [63:0] $end
+$var reg 16 ' watchdog [15:0] $end
+$scope module uut $end
+$var wire 1 # CLK $end
+$var wire 1 $ resetl $end
+$var wire 64 ( startpc [63:0] $end
+$var wire 1 ) zero $end
+$var wire 1 * uncond_branch $end
+$var wire 2 + signop [1:0] $end
+$var wire 5 , rn [4:0] $end
+$var wire 5 - rm [4:0] $end
+$var wire 1 . regwrite $end
+$var wire 64 / regoutB [63:0] $end
+$var wire 64 0 regoutA [63:0] $end
+$var wire 1 1 reg2loc $end
+$var wire 5 2 rd [4:0] $end
+$var wire 11 3 opcode [10:0] $end
+$var wire 64 4 nextpc [63:0] $end
+$var wire 1 5 memwrite $end
+$var wire 1 6 memread $end
+$var wire 64 7 memoryout [63:0] $end
+$var wire 1 8 mem2reg $end
+$var wire 32 9 instruction [31:0] $end
+$var wire 64 : extimm [63:0] $end
+$var wire 1 ; branch $end
+$var wire 1 < alusrc $end
+$var wire 64 = aluout [63:0] $end
+$var wire 4 > aluctrl [3:0] $end
+$var wire 64 ? MemtoRegOut [63:0] $end
+$var reg 64 @ currentpc [63:0] $end
+$scope module alu $end
+$var wire 64 A BusB [63:0] $end
+$var wire 1 ) Zero $end
+$var wire 64 B BusA [63:0] $end
+$var wire 4 C ALUCtrl [3:0] $end
+$var reg 64 D BusW [63:0] $end
+$upscope $end
+$scope module controllogic $end
+$var wire 11 E opcode [10:0] $end
+$var reg 4 F aluop [3:0] $end
+$var reg 1 < alusrc $end
+$var reg 1 ; branch $end
+$var reg 1 8 mem2reg $end
+$var reg 1 6 memread $end
+$var reg 1 5 memwrite $end
+$var reg 1 1 reg2loc $end
+$var reg 1 . regwrite $end
+$var reg 2 G signop [1:0] $end
+$var reg 1 * uncond_branch $end
+$upscope $end
+$scope module datamemory $end
+$var wire 64 H Address [63:0] $end
+$var wire 1 # Clock $end
+$var wire 1 6 MemoryRead $end
+$var wire 1 5 MemoryWrite $end
+$var wire 64 I WriteData [63:0] $end
+$var reg 64 J ReadData [63:0] $end
+$scope task initset $end
+$var reg 64 K addr [63:0] $end
+$var reg 64 L data [63:0] $end
+$upscope $end
+$upscope $end
+$scope module imem $end
+$var wire 64 M Address [63:0] $end
+$var reg 32 N Data [31:0] $end
+$upscope $end
+$scope module nextpclogic $end
+$var wire 1 ) ALUZero $end
+$var wire 1 ; Branch $end
+$var wire 64 O CurrentPC [63:0] $end
+$var wire 64 P NextPC [63:0] $end
+$var wire 1 * Uncondbranch $end
+$var wire 64 Q SignExtImm64 [63:0] $end
+$var reg 64 R ImmShift [63:0] $end
+$var reg 64 S NewPC [63:0] $end
+$upscope $end
+$scope module regfile $end
+$var wire 64 T BusW [63:0] $end
+$var wire 1 # Clk $end
+$var wire 5 U RA [4:0] $end
+$var wire 5 V RB [4:0] $end
+$var wire 5 W RW [4:0] $end
+$var wire 1 . RegWr $end
+$var reg 64 X BusA [63:0] $end
+$var reg 64 Y BusB [63:0] $end
+$upscope $end
+$scope module signext $end
+$var wire 2 Z Ctrl [1:0] $end
+$var wire 26 [ Ins26 [25:0] $end
+$var reg 64 \ BusImm [63:0] $end
+$var reg 1 ] extBit $end
+$upscope $end
+$upscope $end
+$scope task allPassed $end
+$var reg 8 ^ numTests [7:0] $end
+$var reg 8 _ passed [7:0] $end
+$upscope $end
+$scope task passTest $end
+$var reg 64 ` actualOut [63:0] $end
+$var reg 64 a expectedOut [63:0] $end
+$var reg 8 b passed [7:0] $end
+$var reg 257 c testType [256:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx c
+bx b
+bx a
+bx `
+bx _
+bx ^
+x]
+bx \
+bx [
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+bx T
+bx S
+bx R
+bx Q
+bx P
+bx O
+bx N
+bx M
+b0 L
+b100000 K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+x<
+x;
+bx :
+bx 9
+x8
+bx 7
+x6
+x5
+bx 4
+bx 3
+bx 2
+x1
+bx 0
+bx /
+x.
+bx -
+bx ,
+bx +
+x*
+0)
+b0 (
+b0 '
+b0 &
+b0 %
+1$
+0#
+bx "
+bx !
+$end
+#60000
+1#
+#120000
+b1 '
+0#
+#121000
+0$
+#180000
+1#
+#240000
+b10 '
+0#
+#243000
+b10 >
+b10 C
+b10 F
+1.
+0<
+05
+08
+06
+0;
+0*
+01
+b10 ,
+b10 U
+b11000000100000000000100000 [
+b10001011000 3
+b10001011000 E
+b1 -
+b1 V
+b0 2
+b0 W
+b10001011000000100000000000100000 9
+b10001011000000100000000000100000 N
+b100 4
+b100 P
+b100 S
+b0 !
+b0 @
+b0 M
+b0 O
+#300000
+1$
+1#
+#360000
+b11 '
+0#
+#363000
+b1000 4
+b1000 P
+b1000 S
+b100 !
+b100 @
+b100 M
+b100 O
+#420000
+1#
+#480000
+b100 '
+0#
+#483000
+b1100 4
+b1100 P
+b1100 S
+b1000 !
+b1000 @
+b1000 M
+b1000 O
+#540000
+1#
+#600000
+b101 '
+0#
+#603000
+b10000 4
+b10000 P
+b10000 S
+b1100 !
+b1100 @
+b1100 M
+b1100 O
+#660000
+1#
+#720000
+b110 '
+0#
+#723000
+b10100 4
+b10100 P
+b10100 S
+b10000 !
+b10000 @
+b10000 M
+b10000 O
+#780000
+1#
+#840000
+b111 '
+0#
+#843000
+bx >
+bx C
+bx F
+0.
+x8
+x<
+x1
+b0 ,
+b0 U
+b0 [
+b0 3
+b0 E
+b0 -
+b0 V
+b0 9
+b0 N
+b11000 4
+b11000 P
+b11000 S
+b10100 !
+b10100 @
+b10100 M
+b10100 O
+#900000
+1#
+#960000
+b1000 '
+0#
+#963000
+b11100 4
+b11100 P
+b11100 S
+b11000 !
+b11000 @
+b11000 M
+b11000 O
+#1020000
+1#
+#1080000
+b1001 '
+0#
+#1083000
+b100000 4
+b100000 P
+b100000 S
+b11100 !
+b11100 @
+b11100 M
+b11100 O
+#1140000
+1#
+#1200000
+b1010 '
+0#
+#1203000
+b100100 4
+b100100 P
+b100100 S
+b100000 !
+b100000 @
+b100000 M
+b100000 O
+#1260000
+1#
+#1320000
+b1011 '
+0#
+#1323000
+b101000 4
+b101000 P
+b101000 S
+b100100 !
+b100100 @
+b100100 M
+b100100 O
+#1380000
+1#
+#1440000
+b1100 '
+0#
+#1443000
+b101100 4
+b101100 P
+b101100 S
+b101000 !
+b101000 @
+b101000 M
+b101000 O
+#1500000
+1#
+#1560000
+b1101 '
+0#
+#1563000
+b110000 4
+b110000 P
+b110000 S
+b101100 !
+b101100 @
+b101100 M
+b101100 O
+#1620000
+1#
+#1680000
+b1110 '
+0#
+#1683000
+b110100 4
+b110100 P
+b110100 S
+b110000 !
+b110000 @
+b110000 M
+b110000 O
+#1740000
+1#
+#1800000
+b10 ^
+b0 _
+b0 b
+b101001001100101011100110111010101101100011101000111001100100000011011110110011000100000010100000111001001101111011001110111001001100001011011010010000000110001 c
+b1111 a
+b1111 '
+0#
